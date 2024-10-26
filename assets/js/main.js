@@ -8,8 +8,8 @@
   function toggleScrolled() {
     const selectBody = document.querySelector('body');
     const selectHeader = document.querySelector('#header');
-    if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
-    window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
+    // if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
+    selectBody.classList.add('scrolled');
   }
 
   document.addEventListener('scroll', toggleScrolled);
@@ -111,24 +111,24 @@
     });
   });
 
-  /**
-   * Init swiper sliders
-   */
-  function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
-      let config = JSON.parse(
-        swiperElement.querySelector(".swiper-config").innerHTML.trim()
-      );
+  // /**
+  //  * Init swiper sliders
+  //  */
+  // function initSwiper() {
+  //   document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
+  //     let config = JSON.parse(
+  //       swiperElement.querySelector(".swiper-config").innerHTML.trim()
+  //     );
 
-      if (swiperElement.classList.contains("swiper-tab")) {
-        initSwiperWithCustomPagination(swiperElement, config);
-      } else {
-        new Swiper(swiperElement, config);
-      }
-    });
-  }
+  //     if (swiperElement.classList.contains("swiper-tab")) {
+  //       initSwiperWithCustomPagination(swiperElement, config);
+  //     } else {
+  //       new Swiper(swiperElement, config);
+  //     }
+  //   });
+  // }
 
-  window.addEventListener("load", initSwiper);
+  // window.addEventListener("load", initSwiper);
 
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
