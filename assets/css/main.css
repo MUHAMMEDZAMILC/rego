@@ -243,7 +243,7 @@ h6 {
   .navmenu li {
     position: relative;
   }
-
+  
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-color);
@@ -866,25 +866,23 @@ section,
 .hero .hero-bg {
   position: absolute;
   background-image: url("../new/cover.png");
+  background-size: cover; 
+  background-position: center; 
   inset: 0;
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* z-index: 1; */
+  z-index: 1; 
 }
 
 .hero .hero-bg::before {
-  /* content: ""; */
-  /* background: color-mix(in srgb, var(--surface-color), transparent 10%); */
-  position: absolute;
-  inset: 0;
-  z-index: 2;
+  content: none; 
 }
 
 .hero .container {
   position: relative;
-  z-index: 3;
+  z-index: 2;
 }
 
 .hero h1 {
@@ -905,6 +903,7 @@ section,
   font-size: 20px;
   font-weight: 400;
 }
+
 
 @media (min-width: 768px) {
   .hero .hero-img {
