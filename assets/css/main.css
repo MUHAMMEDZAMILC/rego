@@ -1850,5 +1850,55 @@ section,
 }
 
 /* 
-
+==============================================
+              Buissness Page 
+==============================================
 */
+
+.custom-ul {
+	position: relative;
+	gap: 25px;
+	display: flex;
+	flex-direction: column;
+}
+
+.custom-ul:before {
+	content: '';
+	width: 2px;
+	border-right: 2px dashed #D9D9D9;
+	height: 90%;
+	top: 5%;
+	position: absolute;
+	left: 7px;
+}
+
+.custom-ul li {
+	padding-left: 50px;
+	position: relative;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 140%;
+}
+
+.custom-ul li:before {
+	content: '';
+	width: 17px;
+	height: 17px;
+	border-radius: 50%;
+	background-color: var(--lightyellow);
+	position: absolute;
+	top: 5px;
+	left: 0;
+
+}
+
+.custom-ul li:after {
+	content: '';
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background: #121212;
+	top: 11px;
+	left: 6px;
+	position: absolute;
+}
