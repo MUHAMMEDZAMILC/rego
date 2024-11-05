@@ -145,7 +145,78 @@
       
         </div>
       
+        <section id="hotels" class="hotels-section">
+          <div class="container text-center">
+            <h2>Hotels</h2>
+            <div class="image-wrapper">
+              <img src="assets/new/b-hotels.webp" alt="Person using a charging station">
+            </div>
+            <p class="description">
+              Recharge your guests’ batteries far beyond their stay – keep them powered up for their upcoming trip with power bank charging stations. iCharge power bank rental services set the standard of guest satisfaction with revolutionary solutions to the most common problem: depleted mobile phone batteries.
+            </br>
+            </br>
+              As competition continues to soar within Dubai’s hospitality industry, iCharge points help hotels to utilize emerging technologies as a means to deliver superior customer service.
+            </br>
+            </br>
+              Whether you’re the owner of an independent hotel or a hotel chain, phone charging points are a must-have facility to increase the mobility and comfort of your guests. Keeping your guests’ mobile phones fully charged, iCharge power bank rental services are designed to nurture comfortable, stress-free environments for guests to enjoy.
+            </p>
+          </div>
+        </section>
+        <section id="food-beverage" class="content-section">
+          <div class="container text-center">
+            <h2>Food and Beverage</h2>
+            <div class="image-wrapper">
+              <img src="assets/new/food-and-beverage.webp" alt="Person using a charging station in a restaurant">
+            </div>
+            
+            <p class="description">
+              <span class="short-text">
+                Food and Beverage: As the UAE's food and beverage industry continues to grow, providing phone charging stations for customers can be a unique way for food and beverage establishments to attract customers. iCharge power bank rentals are an effective solution for food and beverage retail locations, allowing customers to stay connected while they dine.
+              </span>
+              <span class="full-text">
+                Phone charging stations are a great way to welcome local food enthusiasts, international influencers, and traveling tourists to your establishment. By keeping their phones charged, customers can document their culinary experiences on social media, which can help spread the word about your establishment to their friends and followers. Our charging stations help to maximize customers' dwell time, increasing sales and revenue. We take care of the logistics, so all you have to do is provide delicious food and beverages. We offer charging solutions for both iPhone and Android devices, and our power bank charging stations are designed to enhance the customer experience, increase customer spending, support social sharing and improve customer loyalty.
 
+              </br>
+              <button class="request-station-btn">Request your station now</button>
+              </span>
+            </p>
+            <!-- Image Carousel -->
+            <div class="carousel">
+              <button class="carousel-button prev" onclick="changeSlide(-1)">&#10094;</button>
+              <div class="carousel-images">
+                <img src="assets/new/f10.png" class="carousel-slide" alt="Charging station in a restaurant" />
+                <img src="assets/new/f11.png" class="carousel-slide" alt="Charging station in another location" />
+                <img src="assets/new/f12.png" class="carousel-slide" alt="Charging station setup" />
+                <img src="assets/new/f9.png" class="carousel-slide" alt="Charging station in bar area" />
+                <img src="assets/new/f8.png" class="carousel-slide" alt="Charging station in bar area" />
+                <img src="assets/new/f7.png" class="carousel-slide" alt="Charging station in bar area" />
+                <img src="assets/new/f6.png" class="carousel-slide" alt="Charging station in bar area" />
+                <img src="assets/new/f5.png" class="carousel-slide" alt="Charging station in bar area" />
+                <img src="assets/new/f4.png" class="carousel-slide" alt="Charging station in bar area" />
+              </div>
+              <button class="carousel-button next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+            <button class="read-more-btn" onclick="toggleText()">Read More</button>
+          </div>
+        </section>
+        
+      <section id="hotels" class="hotels-section">
+        <div class="container text-center">
+          <h2>Retail</h2>
+          <div class="image-wrapper">
+            <img src="assets/new/retail-img.webp" alt="Person using a charging station">
+          </div>
+          <p class="description">
+            <p>As more shoppers turn to online shopping, retailers must adapt by offering an exceptional in-store experience. One way to do this is by incorporating phone charging stations. With the widespread use of smartphones, shopping centers can leverage this opportunity to revolutionize the retail industry.</p>
+              <p>iCharge power bank rental stations make the shopping environment more conducive to using smartphones, allowing retail stores to cater to the needs and wants of each customer. Our charging stations leave a lasting impression on your shoppers by providing them with a practical and convenient way to charge their devices, which can increase their satisfaction and spending.
+                Our power bank charging stations redefine ease and convenience for customers by allowing them to research products, compare prices, share reviews on social media, and make contactless payments while they charge their phones. This will enhance the customer experience and make their shopping trip more enjoyable..</p>
+          </p>
+          <button class="request-station-btn">Request your station now</button>
+        </div>
+        
+      </section>
+
+      
        <!-- Terms and Conditions section end -->
     </main>
     <footer id="footer" class="footer position-relative light-background">
@@ -208,5 +279,56 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+// Multi-Item Carousel Functionality
+let currentSlideIndex = 0;
+const slides = document.querySelectorAll(".carousel-slide");
+const totalSlides = slides.length;
+const visibleSlides = 4;
+
+function showSlides() {
+  // Hide all slides initially
+  slides.forEach((slide, index) => {
+    if (index >= currentSlideIndex && index < currentSlideIndex + visibleSlides) {
+      slide.style.display = "block";
+    } else {
+      slide.style.display = "none";
+    }
+  });
+}
+
+function changeSlide(step) {
+  // Calculate the new index
+  currentSlideIndex += step * visibleSlides;
+
+  // Keep the index within bounds
+  if (currentSlideIndex < 0) {
+    currentSlideIndex = 0;
+  } else if (currentSlideIndex > totalSlides - visibleSlides) {
+    currentSlideIndex = totalSlides - visibleSlides;
+  }
+
+  // Show the correct slides
+  showSlides();
+}
+
+// Initialize the carousel display
+showSlides();
+
+// Toggle "Read More" functionality
+function toggleText() {
+  const fullText = document.querySelector(".full-text");
+  const button = document.querySelector(".read-more-btn");
+
+  if (fullText.style.display === "none" || fullText.style.display === "") {
+    fullText.style.display = "inline";
+    button.textContent = "Read Less";
+  } else {
+    fullText.style.display = "none";
+    button.textContent = "Read More";
+  }
+}
+
+  </script>
 </body>
 </html>
