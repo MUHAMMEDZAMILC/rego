@@ -869,7 +869,7 @@ section,
 }
 .section-title-left {
   text-align: left;
-  padding-bottom: 60px;
+  padding-bottom: 20px;
   position: relative;
 }
 
@@ -2013,11 +2013,7 @@ section,
 
 }
 
-.terms-container h2{
-  font-size: 18px;
-  font-weight: 600;
 
-}
 .terms-container p span{
   font-size: 14px;
   font-weight: 600;
@@ -2042,6 +2038,13 @@ section,
 	flex-direction: column;
   list-style: none;
 }
+.customs-ul {
+	position: relative;
+	gap: 15px;
+	display: flex;
+	flex-direction: column;
+  list-style: none;
+}
 
 
 
@@ -2052,6 +2055,13 @@ section,
 	font-size: 20px;
 	line-height: 140%;
 }
+.customs-ul li {
+	padding-left: 50px;
+	position: relative;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 100%;
+}
 
 .custom-ul li:before {
 	content: '';
@@ -2061,6 +2071,17 @@ section,
 	background-color: var(--lightyellow);
 	position: absolute;
 	top: 5px;
+	left: 0;
+
+}
+.customs-ul li:before {
+	content: '';
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: var(--default-color);
+	position: absolute;
+	top: 3px;
 	left: 0;
 
 }
